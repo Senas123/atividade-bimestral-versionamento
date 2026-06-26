@@ -1,50 +1,70 @@
-# 💻 Desenvolvimento Front-end
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro de Alunos</title>
 
-## 📝 Descrição do Projeto/Atividade
-[Descreva brevemente o projeto prático que você escolheu colocar aqui. Ex: "Criação de um painel/dashboard web responsivo para gerenciamento de finanças pessoais, com gráficos interativos e controle de saldo."]
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background:#f4f4f4;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+    }
 
----
+    .container{
+        background:#fff;
+        padding:20px;
+        border-radius:10px;
+        width:320px;
+        box-shadow:0 0 10px rgba(0,0,0,0.2);
+    }
 
-## 🧠 Reflexão de Aprendizado
+    h2{
+        text-align:center;
+    }
 
-### 1. O que aprendi?
-[Substitua este texto por sua resposta. Explique em suas palavras os conceitos de front-end que você aprendeu com esta atividade, tais como: semântica HTML, estilização com CSS moderno (Grid/Flexbox), componentização, interatividade em JavaScript, manipulação do DOM ou o uso de bibliotecas/frameworks.]
+    input{
+        width:100%;
+        padding:10px;
+        margin:8px 0;
+        border:1px solid #ccc;
+        border-radius:5px;
+    }
 
-### 2. Para que serve (Por que aprendi)?
-[Substitua este texto por sua resposta. Explique por que é importante criar interfaces web bonitas, amigáveis, acessíveis e responsivas. Qual o impacto de um bom desenvolvimento front-end no produto final e na experiência do usuário?]
+    button{
+        width:100%;
+        padding:10px;
+        background:#007BFF;
+        color:white;
+        border:none;
+        border-radius:5px;
+        cursor:pointer;
+    }
 
----
+    button:hover{
+        background:#0056b3;
+    }
+</style>
+</head>
 
-## 🛠️ Tecnologias e Ferramentas Utilizadas
-*   HTML5 / CSS3 (Vanilla)
-*   JavaScript (ES6+)
-*   [Outra biblioteca ou ferramenta, ex: React, TailwindCSS, Chart.js]
+<body>
 
----
+<div class="container">
+    <h2>Cadastro de Alunos</h2>
 
-## 💻 Demonstração e Como Rodar
+    <form>
+        <input type="text" placeholder="Nome">
+        <input type="number" placeholder="Idade">
+        <input type="text" placeholder="Turma">
+        <input type="email" placeholder="E-mail">
 
-### Código Relevante Comentado
-[Insira aqui um trecho de código CSS, JS ou HTML que foi crucial para a estrutura ou lógica do projeto, comentando as linhas mais importantes. Exemplo:]
-```javascript
-// Exemplo de código (substitua pelo seu):
-const updateUI = (transactions) => {
-  const listElement = document.getElementById('transaction-list');
-  listElement.innerHTML = ''; // Limpa a lista anterior
-  
-  transactions.forEach(transaction => {
-    const item = document.createElement('li');
-    item.classList.add(transaction.type === 'income' ? 'income-item' : 'expense-item');
-    item.innerHTML = `${transaction.name} <span>R$ ${transaction.amount.toFixed(2)}</span>`;
-    listElement.appendChild(item);
-  });
-};
-```
+        <button type="submit">Cadastrar</button>
+    </form>
+</div>
 
-### Instruções para Executar
-1. Se for um projeto estático em HTML/CSS/JS:
-   - Abra o arquivo `index.html` diretamente em seu navegador web, ou utilize a extensão **Live Server** no VS Code para rodar localmente.
-2. Se for um projeto utilizando Node.js/Vite/React:
-   - Instale as dependências: `npm install`
-   - Execute o servidor local: `npm run dev`
-   - Acesse o link fornecido no console (ex: `http://localhost:5173`).
+</body>
+</html>
